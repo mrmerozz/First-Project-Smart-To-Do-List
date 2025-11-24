@@ -1,0 +1,182 @@
+:root {
+  --bg: #fdfdfd;
+  --text: #222;
+  --card: #ffffff;
+  --primary: #4caf50;
+  --primary-light: #81c784;
+  --input: #f0f0f0;
+  --accent: #0077ff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --card: #1f1f1f;
+  --primary: #90caf9;
+  --primary-light: #64b5f6;
+  --input: #2a2a2a;
+  --accent: #00bfff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+#themeToggle {
+  background: var(--accent);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--input);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+#addBtn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+  background: var(--input);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+li label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+li button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: crimson;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#progress {
+  margin-top: 2rem;
+}
+
+#progressBar {
+  background: var(--input);
+  border-radius: 999px;
+  overflow: hidden;
+  height: 22px;
+  width: 100%;
+  position: relative;
+}
+
+#progressFill {
+  background: linear-gradient(90deg, var(--primary-light), var(--primary));
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+#progressText {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  line-height: 22px;
+  color: var(--text);
+}
+
+#gifContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#gifContainer img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  #taskInput, #addBtn {
+    width: 100%;
+  }
+}

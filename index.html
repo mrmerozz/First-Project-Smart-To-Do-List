@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="greeting">Hello!</h1>
+      <button id="themeToggle">LIGHT</button>
+    </header>
+    <main>
+      <div class="input-row">
+        <input type="text" id="taskInput" placeholder="Add new task...">
+        <button id="addBtn">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+      <div id="progress">
+        <div id="progressBar">
+          <div id="progressFill"></div>
+          <div id="progressText">0%</div>
+        </div>
+      </div>
+      <div id="gifContainer"></div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
