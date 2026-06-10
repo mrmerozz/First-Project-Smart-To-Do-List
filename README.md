@@ -10,7 +10,7 @@ This was one of my first web projects, made with plain HTML, CSS, and JavaScript
 - Check tasks off as done, or clear all the finished ones at once
 - A progress bar and quick stats (total / done / left) that update as you go
 - Light and dark theme toggle, plus a time-based greeting at the top
-- Small motivational messages and a GIF that change as you make progress
+- Motivational messages that change as you make progress
 - Saves your tasks with localStorage, so nothing is lost on refresh
 
 ## Running it
